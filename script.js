@@ -62,7 +62,8 @@ generateButton.addEventListener("click", () => {
     }
 
     password.innerText = createdPassword;
-    password.style.opacity = "1";
+    
+    password.classList.add('opacity');
 
     const strengthText = document.getElementById("strength-text");
     switch (counter) {
@@ -72,38 +73,38 @@ generateButton.addEventListener("click", () => {
         case 1:
             resetStrengthBar();
             strengthText.innerText = "TOO WEAK!";
-            firstStrengthBar.style.backgroundColor = "#f64a4a";
-            firstStrengthBar.style.border = "none";
+            firstStrengthBar.classList.add('red-background');
+            firstStrengthBar.classList.add('border-none');
             break;
         case 2:
             resetStrengthBar();
             strengthText.innerText = "WEAK";
-            firstStrengthBar.style.backgroundColor = "#fb7c58";
-            secondStrengthBar.style.backgroundColor = "#fb7c58";
-            firstStrengthBar.style.border = "none";
-            secondStrengthBar.style.border = "none";
+            firstStrengthBar.classList.add('orange-background');
+            secondStrengthBar.classList.add('orange-background');
+            firstStrengthBar.classList.add('border-none');
+            secondStrengthBar.classList.add('border-none');
             break;
         case 3:
             resetStrengthBar();
             strengthText.innerText = "MEDIUM";
-            firstStrengthBar.style.backgroundColor = "#f8cd65";
-            secondStrengthBar.style.backgroundColor = "#f8cd65";
-            thirdStrengthBar.style.backgroundColor = "#f8cd65";
-            firstStrengthBar.style.border = "none";
-            secondStrengthBar.style.border = "none";
-            thirdStrengthBar.style.border = "none";
+            firstStrengthBar.classList.add('yellow-background');
+            secondStrengthBar.classList.add('yellow-background');
+            thirdStrengthBar.classList.add('yellow-background');
+            firstStrengthBar.classList.add('border-none');
+            secondStrengthBar.classList.add('border-none');
+            thirdStrengthBar.classList.add('border-none');
             break;
         case 4:
             resetStrengthBar();
             strengthText.innerText = "STRONG";
-            firstStrengthBar.style.backgroundColor = "#a4ffaf";
-            secondStrengthBar.style.backgroundColor = "#a4ffaf";
-            thirdStrengthBar.style.backgroundColor = "#a4ffaf";
-            fourthStrengthBar.style.backgroundColor = "#a4ffaf";
-            firstStrengthBar.style.border = "none";
-            secondStrengthBar.style.border = "none";
-            thirdStrengthBar.style.border = "none";
-            fourthStrengthBar.style.border = "none";
+            firstStrengthBar.classList.add('green-background');
+            secondStrengthBar.classList.add('green-background');
+            thirdStrengthBar.classList.add('green-background');
+            fourthStrengthBar.classList.add('green-background');
+            firstStrengthBar.classList.add('border-none');
+            secondStrengthBar.classList.add('border-none');
+            thirdStrengthBar.classList.add('border-none');
+            fourthStrengthBar.classList.add('border-none');
             break;
     }
 
@@ -111,14 +112,10 @@ generateButton.addEventListener("click", () => {
 });
 
 function resetStrengthBar() {
-    firstStrengthBar.style.backgroundColor = "#18171f";
-    secondStrengthBar.style.backgroundColor = "#18171f";
-    thirdStrengthBar.style.backgroundColor = "#18171f";
-    fourthStrengthBar.style.backgroundColor = "#18171f";
-    firstStrengthBar.style.border = "1px solid var(--white)";
-    secondStrengthBar.style.border = "1px solid var(--white)";
-    thirdStrengthBar.style.border = "1px solid var(--white)";
-    fourthStrengthBar.style.border = "1px solid var(--white)";
+    firstStrengthBar.classList.remove('red-background','orange-background', 'yellow-background','green-background','border-none');
+    secondStrengthBar.classList.remove('red-background','orange-background', 'yellow-background','green-background','border-none');
+    thirdStrengthBar.classList.remove('red-background','orange-background', 'yellow-background','green-background','border-none');
+    fourthStrengthBar.classList.remove('red-background','orange-background', 'yellow-background','green-background','border-none');
 }
 
 function getRandomCharacter(type) {
