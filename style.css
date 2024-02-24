@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-black: #24232c;
+    --gray: #817d92;
+    --white: #e6e5ea;
+    --black: #18171f;
+    --green: #a4ffaf;
+    --red: #f64a4a;
+    --orange: #fb7c58;
+    --yellow: #f8cd65;
+
+    font-family: "JetBrains Mono", serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    gap: 1.1rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    opacity: 0.4;
+}
+
+section.password-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.password-container p.password{
+    opacity: .3;
+    font-size: 1.2rem;
+}
+
+section.password-container,
+section.password-options {
+    background-color: var(--light-black);
+    padding: .8rem;
+}
+
+section.password-options {
+    display: flex;
+    flex-direction: column;
+}
+
+div.character-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+section.password-options {
+    gap: 1.4rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+button.copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+button.copy-button:hover{
+    filter: brightness(0) invert(1);
+}
+
+button img {
+    width: 1rem;
+}
+
+.character-length {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12rem;
+}
+
+.character-length p.character-length-text{
+    font-size: .8rem;
+}
+
+.character-length-number{
+    font-size: 1.3rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .8rem;
+    margin-right: 3rem;
+}
+
+.password-strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--black);
+}
+
+.password-strength h2 {
+    font-size: .8rem;
+    opacity: 0.4;
+}
+
+.generate-button {
+    padding: 1.2rem;
+    border-radius: 0;
+    border: 1px solid #000;
+    background-color: var(--green);
+    opacity: 0.8;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.character-options header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.character-length-number {
+    color: var(--green);
+}
+
+input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+    border: none;
+    background-color: var(--green);
+    background-image: url('starter-code/assets/images/icon-check.svg');
+    background-position: center;
+    background-size: 8px;
+    background-repeat: no-repeat;
+}
+
+.strength-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.strength-container p{
+    font-size: .8rem;
+}
+
+.strength-bars{
+    display: flex;
+    gap: .4rem;
+}
+
+.strength-bar{
+    width: 8px;
+    height: 22px;
+    border: 1px solid var(--white);
+}
+
+.generate-button:hover{
+    background-color: var(--light-black);
+    color: var(--green);
+    border-color: var(--green);
+    cursor: pointer;
+}
+
+.generate-button:hover path{
+    fill: var(--green);
+}
+
+.generate-button svg{
+    transform: scale(.8);
+}
+
+.range-element input{
+    width: 100%;
+}
+
+.range-element:hover input{ 
+    cursor: pointer;
+}
+
+.range-element input{
+    appearance: none;
+    height: 4px;
+    background-color: var(--black);
+}
+
+.range-element input::-webkit-slider-thumb{
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    border-radius: 50%;
+    z-index: 20;
+    position: relative;
+}
+
+.range-element input::-webkit-slider-thumb:hover{
+    border: 1px solid var(--green);
+    background-color: var(--black);
+}
+
+.range-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.range-element .line{
+    width: 0;
+    height: 4px;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.button-copy-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    color: var(--green);
+}
+
+.button-copy-container p{
+    font-size: 1rem;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main>
+            <header>
+                <h2>Password Generator</h2>
+            </header>
+            <section class="password-container">
+                <p id="password" class="password">P4$5W0rD!</p>
+                <div class="button-copy-container">
+                    <p id="button-text"></p>
+                <button class="copy-button" id="copy-button">
+                    <img
+                        src="starter-code/assets/images/icon-copy.svg"
+                        alt="copy button"
+                    />
+                </button>
+             </div>
+            </section>
+            <section class="password-options">
+                <div class="character-options">
+                    <header>
+                        <div class="character-length">
+                            <p class="character-length-text">Character Length</p>
+                            <p
+                                class="character-length-number"
+                                id="character-length"
+                            >
+                                2
+                            </p>
+                        </div>
+                      <div class="range-element">
+                        <div class="line"></div>
+                        <input type="range" id="character-range-length" min="2" max="20" class="character-range" value="1">
+                    </div>
+                    </header>
+                    <div class="options">
+                        <label><input type="checkbox" id="uppercase" value="uppercase">Include Uppercase Letters</label>
+                        
+                        <label><input type="checkbox" id="lowercase" value="lowercase">Include Lowercase Letters</label>
+
+                        <label><input type="checkbox" id="numbers" value="number">Include Numbers</label>
+
+                        <label><input type="checkbox" id="symbols" value="symbol">Include Symbols</label>
+                    </div>
+                </div>
+                </div>
+                <div class="password-strength">
+                    <h2>STRENGTH</h2>
+                    <div class="strength-container">
+                        <p id="strength-text"></p>
+                        <div class="strength-bars">
+                            <div class="strength-bar" id="first"></div>
+                            <div class="strength-bar" id="second"></div>
+                            <div class="strength-bar" id="third"></div>
+                            <div class="strength-bar" id="fourth"></div>
+                        </div>
+                    </div>
+                </div>
+                <button id="generate-button" class="generate-button">
+                    GENERATE
+                    <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg>
+                </button>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
